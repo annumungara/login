@@ -17,12 +17,12 @@ function App() {
       {
         console.log("Logged IN");
         setUser({
-          name: details.name,
+          email: details.name,
           email: details.email
         });
       } else{
         console.log("Details do not match!");
-        SetError("Details do not match");
+        setError("Details do not match");
       }
     }
 
@@ -33,7 +33,7 @@ function App() {
 return (
   <div className="App">
       {(user.email != "") ? (
-        <div className="welcome">
+        <div className="Welcome">
           <h2>Welcome,<span>{user.name}</span></h2>
           <button onClick={Logout}>Logout</button>
         </div>
